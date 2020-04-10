@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>1.0.00001</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{333D94F6-77FD-4483-9793-4178EF5FDA90}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestPrimitive.Services.Tests</RootNamespace>
+    <AssemblyName>TestPrimitive.Services.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Core">
+      <HintPath>..\CommonLib\Common.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+
+    <Compile Include="Common\CommonServiceTest.cs" />
+
+    <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="ProductServiceTest.cs" />
+
+  </ItemGroup>
+  <ItemGroup>
+
+    <ProjectReference Include="..\TestPrimitive.Services\TestPrimitive.Services.csproj">
+      <Project>{18255976-97FD-4796-AE63-E9A6AF4317B7}</Project>
+      <Name>TestPrimitive.Services</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestPrimitive.Services.Interfaces\TestPrimitive.Services.Interfaces.csproj">
+      <Project>{8552B8F0-C5E0-48DC-B2D2-4499368D4FD7}</Project>
+      <Name>TestPrimitive.Services.Interfaces</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestPrimitive.Entities\TestPrimitive.Entities.csproj">
+      <Project>{7E7E2938-7F8A-4950-9EDA-9CCA3FF24DC1}</Project>
+      <Name>TestPrimitive.Entities</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestPrimitive.TestData\TestPrimitive.TestData.csproj">
+      <Project>{92AAFBD9-DAB1-490F-923D-087CCACFD97E}</Project>
+      <Name>TestPrimitive.TestData</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\TestPrimitive.Daos.Mocks\TestPrimitive.Daos.Mocks.csproj">
+      <Project>{E1968598-31FD-4F52-A6CF-BDEA24EA150D}</Project>
+      <Name>TestPrimitive.Daos.Mocks</Name>
+    </ProjectReference>
+
+  </ItemGroup>
+ <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
